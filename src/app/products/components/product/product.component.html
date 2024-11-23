@@ -1,0 +1,16 @@
+<div class="card ">
+
+    <img src="{{data.image}}" class="card-img-top" alt="منتج 1"  routerLink="/details/{{data.id}}">
+    <div class="card-body">
+        <h5 class="card-title" > {{data.title}}</h5>
+        <div class="d-flex justify-content-between pe-5 addcart"   >
+            <button class="btn btn-primary" *ngIf="!addbutton" (click)="addbutton=true">أضف إلى السلة</button>
+            <span class="rounded-pill border border-primary p-2" >{{data.price}} L.E</span>
+        </div>
+
+        <div class="d-flex m-1" *ngIf="addbutton">
+            <input type="number" class="form-control w-50 me-2" [(ngModel)]="amount">
+            <button class="btn btn-outline-primary" (click)="add();addbutton=false">Add</button>
+        </div>
+    </div>
+</div>

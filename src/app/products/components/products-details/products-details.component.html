@@ -1,0 +1,47 @@
+<!-- <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-12">
+            <div class="card mt-5">
+                <img src="{{data.image}}" class="card-img-top" alt="اسم المنتج">
+                <div class="card-body">
+                    <h5 class="card-title">{{data.title}}</h5>
+                    <h5 class="card-title">{{data.category}}</h5>
+                    <p class="card-text">{{data.description}}</p>
+                    <p class="card-text">{{data.rating.rate}}</p>
+                    <p class="card-text">{{data.rating.count}}</p>
+                    <h6 class="card-price">{{data.price}} L.E</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="row"><div class="col-md-6 col-12">
+    <img src="{{data.image}}" class="card-img-top" alt="اسم المنتج">
+</div>
+<div class="col-md-6 col-12 d-flex flex-column justify-content-between">
+    <h1 class="card-title">{{data.title}}</h1>
+    <div>
+        <h2 class="text-info">category</h2>
+        <h2 >{{data.category}}</h2>
+    </div>
+    <div>
+        <h2 class="text-info">description</h2>
+        <p class="card-text">{{data.description}}</p>
+    </div>
+    <div  >
+        <p class="text-info fs-5 ">rate<span class="text-danger m-2 fs-4"> {{data.rating?.rate}}</span></p> 
+    </div>
+        <div>
+            <h2 class="text-info">count</h2>
+
+            <p class="card-text">{{data.rating?.count}}</p>
+        </div>
+    <h2 class="card-price">{{data.price}} L.E</h2>
+</div>
+</div>
+</div>
+<button (click)="gotopro()" routerLink="/details/{{data.id+1}}">chang prodect++</button>
+<button (click)="gotopr()" routerLink="/details/{{data.id-1}}">chang prodect--</button>
+
